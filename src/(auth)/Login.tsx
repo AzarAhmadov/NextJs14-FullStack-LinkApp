@@ -8,13 +8,13 @@ const Login = () => {
             <div className="container mx-auto">
                 <div className="row grid desktop:grid-cols-2 gap-5 place-items-center ">
                     <div className='flex align-middle justify-center'>
-                        <img src="/login.png" className='w-full h-full tablet:w-[270px] laptop:w-[400px] desktop:w-[550px] tablet:mb-3 object-contain' alt="Login" />
+                        <img src="/login.png" className='w-full h-full tablet:w-[220px] laptop:w-[400px] desktop:w-[550px] tablet:mb-3 object-contain' alt="Login" />
                     </div>
                     <div className='bg-[#fff] w-full rounded-xl p-20 tablet:p-10  flex flex-col justify-center align-middle'>
-                        <h1 className='text-[30px] tablet:text-[22px] text-center mb-5'>
+                        <h1 className='text-[30px] tablet:text-[20px] text-center mb-5'>
                             Welcome to
                             <br />
-                            <span className='text-[#6358DC] tablet:text-[30px] font-bold text-[37px]'>
+                            <span className='text-[#6358DC] tablet:text-[27px] font-bold text-[37px]'>
                                 Link app
                             </span>
                         </h1>

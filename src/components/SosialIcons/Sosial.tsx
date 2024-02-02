@@ -8,7 +8,7 @@ interface sosialProps {
 const Sosial: React.FC<sosialProps> = ({ el }) => {
     return (
         <li className='flex'>
-            <a target='_blank' className='p-3 rounded-md shadow-lg transition-all hover:scale-110' href={el.link}>{el.icon} </a>
+            <a target='_blank' className='p-3 shadow-lg transition-all hover:scale-110' href={el.link}>{el.icon} </a>
         </li>
     )
 }

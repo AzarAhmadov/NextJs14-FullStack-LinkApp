@@ -16,7 +16,7 @@ export const socialMediaData: SocialMediaIcon[] = [
 
 export const LinksData: Linkdata[] = [
     {
-        title: "My favorite react library",
+        title: "Call us",
         url: 'Call us',
         icon: <IoCallOutline color='#000' size={23} />
     },

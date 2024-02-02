@@ -1,6 +1,7 @@
 import React from 'react'
 import { LinksData, socialMediaData } from '@/constants/Constants';
 import { FaUserEdit } from "react-icons/fa";
+import { LuLink2 } from "react-icons/lu";
 import Sosial from '../SosialIcons/Sosial';
 import UserLinks from '../UserLinks/UserLinks';
 import Share from '../Share/Share';
@@ -9,14 +10,14 @@ import Link from 'next/link';
 const Show = () => {
     return (
         <>
-            <section className='min-h-lvh relative flex flex-col justify-center tablet:pb-4 bg-cover bg-no-repeat  bg-center bg-[url(https://images.pexels.com/photos/1743375/pexels-photo-1743375.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)]' >
+            <section className='min-h-lvh relative flex flex-col justify-center tablet:pb-4 bg-cover bg-no-repeat  bg-center bg-[url(https://images.pexels.com/photos/1366957/pexels-photo-1366957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)]' >
                 <div className='laptop:w-auto flex flex-col tablet:w-[100%]'>
-                    <div className='flex flex-col mt-[50px]'>
+                    <div className='flex flex-col mt-[60px]'>
                         <div className='m-auto'>
                             <img className="inline-block object-cover h-24 w-24 rounded-full ring-2 ring-white" src="https://azarahmadov.com/_next/image?url=%2Fabout.jpeg&w=1080&q=75" alt="user photo" />
                         </div>
-                        <div className="absolute left-4 top-4">
-                            <Link className='flex backdrop-contrast-125 bg-white/15 ps-4 pe-4 pt-2 pb-2 rounded-[30px] text-white text-[20px]' href='/Edit'> Edit <FaUserEdit className='ms-2 h-6 w-6' /> </Link>
+                        <div className="absolute left-5 top-5">
+                            <Link className='flex backdrop-contrast-125 bg-white/15 ps-4 pe-4 pt-2 pb-2 rounded-[30px] text-white hover:bg-white hover:text-black transition-all text-[20px]' href='/Edit'> Edit <FaUserEdit className='ms-2 h-6 w-6' /> </Link>
                         </div>
                     </div>
                     <div className="user-info text-white text-center pt-[15px] tablet:ps-2 tablet:pe-2">
@@ -40,6 +41,9 @@ const Show = () => {
                 </div>
                 <div>
                     <Share />
+                </div>
+                <div className='text-black flex justify-center pb-2 pt-6'>
+                    <Link className='flex text-[22px] font-light text-white' href={'/'}> Link App <LuLink2 className='h-[28px] w-[28px] ms-2 mt-1' />  </Link>
                 </div>
             </section>
         </>

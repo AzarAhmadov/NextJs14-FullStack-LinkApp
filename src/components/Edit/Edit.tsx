@@ -18,14 +18,7 @@ interface Field {
 const Edit: React.FC = () => {
 
     const [charsLeft, setCharsLeft] = useState<number>(35);
-    const [fields, setFields] = useState<Field[]>(() => {
-        const storedFields = localStorage.getItem('fields');
-        return storedFields ? JSON.parse(storedFields) : [];
-    });
-
-    useEffect(() => {
-        localStorage.setItem('fields', JSON.stringify(fields));
-    }, [fields]);
+    const [fields, setFields] = useState<Field[]>([]);
 
     const handleWordCount = (event: ChangeEvent<HTMLTextAreaElement>) => {
         const charCount: number = event.target.value.length;
@@ -46,11 +39,11 @@ const Edit: React.FC = () => {
     const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
     }
-    
+
+
     return (
         <section className='min-h-lvh bg-slate-800 pt-4 pe-3 ps-3 pb-4'>
             <div className='container'>
-
                 <div className='bg-cover rounded-md relative bg-no-repeat h-[200px] bg-center bg-[url(https://images.pexels.com/photos/1366957/pexels-photo-1366957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)]'>
                     <div className='absolute left-0 right-0 -bottom-[120px] grid place-items-center h-[250px]'>
                         <div className='relative'>
@@ -102,7 +95,7 @@ const Edit: React.FC = () => {
                             <p className='text-center text-white pt-5 text-[20px]'>No links yet.</p>
                         ) : (
                             <ul>
-                                {fields?.map((_, idx: number) => (
+                                {fields?.map((el, idx: number) => (
                                     <li key={idx} className='grid desktop:grid-cols-2 mt-5 gap-4 border-b-[1px] border-slate-600 pb-6 '>
                                         <div className='flex flex-col'>
                                             <label htmlFor={`title-${idx}`} className='text-white text-[19px] mb-3'> Title </label>

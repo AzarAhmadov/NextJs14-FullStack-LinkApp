@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, ChangeEvent, useEffect } from 'react';
+import React, { useState, ChangeEvent } from 'react';
 import { FaCloudUploadAlt } from "react-icons/fa";
 import { RiAccountBoxLine } from "react-icons/ri";
 import { MdOutlineSave } from "react-icons/md";
@@ -12,13 +12,28 @@ import Sosial from '../Sosial/Sosial';
 interface Field {
     title: string;
     url: string;
-    id: number;
 }
+
+type FormData = {
+    [key: string]: string;
+};
 
 const Edit: React.FC = () => {
 
     const [charsLeft, setCharsLeft] = useState<number>(35);
-    const [fields, setFields] = useState<Field[]>([]);
+    const [fields, setFields] = useState<Field[]>([
+        { url: "", title: "" }
+    ]);
+
+    const [formData, setFormData] = useState<FormData>({ url: "", title: "" });
+
+    const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = event.target;
+        setFormData(prevFormData => ({
+            ...prevFormData,
+            [name]: value
+        }));
+    };
 
     const handleWordCount = (event: ChangeEvent<HTMLTextAreaElement>) => {
         const charCount: number = event.target.value.length;
@@ -37,13 +52,15 @@ const Edit: React.FC = () => {
     }
 
     const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        alert(`Name: ${formData.url}, Email: ${formData.title}`
+        );
         e.preventDefault();
     }
 
-
     return (
-        <section className='min-h-lvh bg-slate-800 pt-4 pe-3 ps-3 pb-4'>
+        <section className='min-h-lvh bg-slate-800 pt-4 pe-4 ps-4 pb-4'>
             <div className='container'>
+
                 <div className='bg-cover rounded-md relative bg-no-repeat h-[200px] bg-center bg-[url(https://images.pexels.com/photos/1366957/pexels-photo-1366957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)]'>
                     <div className='absolute left-0 right-0 -bottom-[120px] grid place-items-center h-[250px]'>
                         <div className='relative'>
@@ -88,60 +105,70 @@ const Edit: React.FC = () => {
                     Links <FaExternalLinkSquareAlt className='w-7 h-7 mt-[4px] ms-2' />
                 </h4>
 
-                <div>
 
-                    <form action="" onSubmit={handleFormSubmit} >
-                        {fields?.length === 0 ? (
-                            <p className='text-center text-white pt-5 text-[20px]'>No links yet.</p>
-                        ) : (
-                            <ul>
-                                {fields?.map((el, idx: number) => (
-                                    <li key={idx} className='grid desktop:grid-cols-2 mt-5 gap-4 border-b-[1px] border-slate-600 pb-6 '>
-                                        <div className='flex flex-col'>
-                                            <label htmlFor={`title-${idx}`} className='text-white text-[19px] mb-3'> Title </label>
+                <form action="" onSubmit={handleFormSubmit} >
+                    {fields?.length === 0 ? (
+                        <p className='text-center text-white pt-5 text-[20px]'>No links yet.</p>
+                    ) : (
+                        <ul>
+                            {fields?.map((_, idx: number) => (
+                                <li key={idx} className='grid desktop:grid-cols-2 mt-5 gap-4 border-b-[1px] border-slate-600 pb-6 '>
+                                    <div className='flex flex-col'>
+                                        <label htmlFor={`title-${idx}`} className='text-white text-[19px] mb-3'> Title </label>
+                                        <input
+                                            id={`title-${idx}`}
+                                            value={formData[`title-${idx}`]}
+                                            onChange={handleChange}
+                                            type="text"
+                                            name="title"
+                                            placeholder='Title'
+                                            className='text-black p-2 rounded-lg placeholder:text-black'
+                                        />
+                                    </div>
+                                    <div className='flex flex-col'>
+                                        <label htmlFor={`url-${idx}`} className='text-white text-[19px] mb-3'> Url </label>
+                                        <div className='desktop:flex w-full gap-3'>
                                             <input
-                                                id={`title-${idx}`}
+                                                id={`url-${idx}`}
+                                                value={formData[`url-${idx}`]}
+                                                onChange={handleChange}
                                                 type="text"
-                                                name="title"
-                                                placeholder='Title'
-                                                className='text-black p-2 rounded-lg placeholder:text-black'
+                                                name="url"
+                                                placeholder='Url'
+                                                className='text-black p-2 w-full rounded-lg placeholder:text-black'
                                             />
-                                        </div>
-                                        <div className='flex flex-col'>
-                                            <label htmlFor={`url-${idx}`} className='text-white text-[19px] mb-3'> Url </label>
-                                            <div className='desktop:flex w-full gap-3'>
-                                                <input
-                                                    id={`url-${idx}`}
-                                                    type="text"
-                                                    name="url"
-                                                    placeholder='Url'
-                                                    className='text-black p-2 w-full rounded-lg placeholder:text-black'
-                                                />
-                                                <div className='flex justify-center'>
-                                                    <button onClick={() => handleDelete(idx)} className='bg-red-500 flex  text-white rounded-xl p-2 ps-4 pe-4 mt-4 desktop:mt-0 m'>
-                                                        Delete <FaRegTrashAlt className='ms-2 mt-1' />
-                                                    </button>
-                                                </div>
+                                            <div className='flex justify-center'>
+                                                <button onClick={() => handleDelete(idx)} className='bg-red-500 flex  text-white rounded-xl p-2 ps-4 pe-4 mt-4 desktop:mt-0 hover:bg-red-400 transition-all'>
+                                                    Delete <FaRegTrashAlt className='ms-2 mt-1' />
+                                                </button>
                                             </div>
                                         </div>
-                                    </li>
-                                ))}
-                            </ul>
-                        )}
-                    </form>
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
+                    )}
 
                     <button
                         onClick={addField}
                         type="button"
-                        className='flex justify-center align-middle m-auto mt-6 bg-slate-400 p-3 ps-5 pe-5 rounded-[30px] text-white text-[18px]'
+                        className='flex justify-center align-middle m-auto mt-6 bg-slate-400 p-2 ps-5 pe-5 rounded-[30px] text-white text-[18px] hover:bg-slate-600 transition-all'
                     >
                         {
                             fields?.length === 0 ? 'Add link' : 'Add New'
                         }
                         <LuPlusCircle color='#fff' className='h-6 w-6 ms-2 mt-[1px]' />
                     </button>
-                    <button className='bg-[#46627b] w-full mt-6 rounded-md p-2 text-white hover:scale-95 transition-all font-medium flex justify-center text-[18px]'> Save <MdOutlineSave className='w-5 h-5 mt-[3px] ms-2' /></button>
-                </div>
+                    {
+                        fields.length !== 0 &&
+                        <button
+                            onClick={() => handleFormSubmit}
+                            className='bg-[#46627b] w-full mt-6 rounded-md p-2 text-white hover:scale-95 transition-all font-medium flex justify-center text-[18px]'>
+                            Save
+                            <MdOutlineSave className='w-5 h-5 mt-[3px] ms-2' />
+                        </button>
+                    }
+                </form>
             </div>
         </section>
     )

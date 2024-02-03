@@ -12,7 +12,7 @@ import Sosial from '../Sosial/Sosial';
 interface Field {
     title: string;
     url: string;
-    id: any;
+    id: number;
 }
 
 const Edit: React.FC = () => {
@@ -21,7 +21,7 @@ const Edit: React.FC = () => {
     const [fields, setFields] = useState<Field[]>([{ url: "", title: "", id: 1 }]);
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>, idx: number) => {
-        
+
         const { name, value } = event.target;
 
         setFields(prevFields => {

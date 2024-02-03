@@ -2,7 +2,7 @@ import React from 'react';
 import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 
-const Login = () => {
+const Login: React.FC = () => {
     return (
         <section className='h-screen  flex justify-center items-center bg-[#F4F4F4]'>
             <div className="container mx-auto">

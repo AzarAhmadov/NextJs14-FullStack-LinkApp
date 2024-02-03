@@ -7,7 +7,7 @@ import UserLinks from '../UserLinks/UserLinks';
 import Share from '../Share/Share';
 import Link from 'next/link';
 
-const Show = () => {
+const Show:React.FC = () => {
     return (
         <>
             <section className='min-h-lvh relative flex flex-col justify-center tablet:pb-4 bg-cover bg-no-repeat  bg-center bg-[url(https://images.pexels.com/photos/1366957/pexels-photo-1366957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)]' >
@@ -22,7 +22,7 @@ const Show = () => {
                     </div>
                     <div className="user-info text-white text-center pt-[15px] tablet:ps-2 tablet:pe-2">
                         <h4 className='text-[27px] font-medium'> Azar Ahmadov </h4>
-                        <p className='text-[17px] mt-2 font-think m-auto laptop:w-[500px] tablet:w-[100%]'> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, sunt. Lorem ipsum dolor sit. Lorem, ipsum dolor. </p>
+                        <p className='text-[17px] mt-2 font-think m-auto laptop:w-[600px] ps-[10px] pe-[10px]'> Front-End Developer from Azerbaijan </p>
                     </div>
                     <ul className="sosial flex flex-wrap justify-center ps-3 pe-3 pt-3 ">
                         {
@@ -42,7 +42,7 @@ const Show = () => {
                 <div>
                     <Share />
                 </div>
-                <div className='text-black flex justify-center pb-2 pt-6'>
+                <div className='text-black flex justify-center pt-10 pb-3'>
                     <Link className='flex text-[22px] font-light text-white' href={'/'}> Link App <LuLink2 className='h-[28px] w-[28px] ms-2 mt-1' />  </Link>
                 </div>
             </section>

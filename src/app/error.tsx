@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-const error = () => {
+const error: React.FC = () => {
     return (
         <div>
             Error

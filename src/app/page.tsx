@@ -1,7 +1,7 @@
 import Login from '@/(auth)/Login'
 import React from 'react'
 
-const page = () => {
+const page: React.FC = () => {
   return (
     <>
       <Login />

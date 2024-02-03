@@ -11,7 +11,7 @@ const config: Config = {
       center: true,
     },
     screens: {
-      'tablet': '360px',
+      'tablet': '768px',
       'laptop': '1024px',
       'desktop': '1280px',
     },

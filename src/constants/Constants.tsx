@@ -10,9 +10,8 @@ export const socialMediaData: SocialMediaIcon[] = [
     { icon: <FiGithub color='#fff' size={30} />, link: 'https://github.com' },
     { icon: <SlSocialFacebook color='#fff' size={30} />, link: 'https://facebook.com' },
     { icon: <FaWhatsapp color='#fff' size={30} />, link: 'https://whatsapp.com' },
-    { icon: <PiTelegramLogoDuotone color='#fff' size={30    } />, link: 'https://telegram.org' },
+    { icon: <PiTelegramLogoDuotone color='#fff' size={30} />, link: 'https://telegram.org' },
 ];
-
 
 export const LinksData: Linkdata[] = [
     {
@@ -34,5 +33,48 @@ export const LinksData: Linkdata[] = [
         title: "Read reviews",
         url: 'Read reviews',
         icon: <MdKeyboardArrowRight color='#000' size={23} />
+    },
+]
+
+export const SosialImage = [
+    {
+        title: 'instagram',
+        logo: '/instagram.png'
+    },
+    {
+        title: 'Github',
+        logo: '/github.png'
+    },
+    {
+        title: 'Twitter',
+        logo: '/twitter.png'
+    },
+    {
+        title: 'Telegram',
+        logo: '/Telegram.png'
+    },
+    {
+        title: 'Facebook',
+        logo: '/fb.png'
+    },
+    {
+        title: 'Whatsapp',
+        logo: '/wp.png'
+    },
+    {
+        title: 'instagram',
+        logo: '/youtube.png'
+    },
+    {
+        title: 'TikTok',
+        logo: '/tiktok.png'
+    },
+    {
+        title: 'Spotify',
+        logo: '/spotify.png'
+    },
+    {
+        title: 'Medium',
+        logo: '/Medium.webp'
     },
 ]

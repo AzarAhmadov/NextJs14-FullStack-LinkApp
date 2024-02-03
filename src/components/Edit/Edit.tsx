@@ -12,27 +12,30 @@ import Sosial from '../Sosial/Sosial';
 interface Field {
     title: string;
     url: string;
+    id: any;
 }
-
-type FormData = {
-    [key: string]: string;
-};
 
 const Edit: React.FC = () => {
 
     const [charsLeft, setCharsLeft] = useState<number>(35);
-    const [fields, setFields] = useState<Field[]>([
-        { url: "", title: "" }
-    ]);
+    const [fields, setFields] = useState<Field[]>([{ url: "", title: "", id: 1 }]);
 
-    const [formData, setFormData] = useState<FormData>({ url: "", title: "" });
-
-    const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (event: ChangeEvent<HTMLInputElement>, idx: number) => {
+        
         const { name, value } = event.target;
-        setFormData(prevFormData => ({
-            ...prevFormData,
-            [name]: value
-        }));
+
+        setFields(prevFields => {
+            const updatedFields = prevFields.map((field, index) => {
+                if (index === idx) {
+                    return {
+                        ...field,
+                        [name]: value
+                    };
+                }
+                return field;
+            });
+            return updatedFields;
+        });
     };
 
     const handleWordCount = (event: ChangeEvent<HTMLTextAreaElement>) => {
@@ -52,8 +55,7 @@ const Edit: React.FC = () => {
     }
 
     const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        alert(`Name: ${formData.url}, Email: ${formData.title}`
-        );
+        console.log(fields)
         e.preventDefault();
     }
 
@@ -111,14 +113,14 @@ const Edit: React.FC = () => {
                         <p className='text-center text-white pt-5 text-[20px]'>No links yet.</p>
                     ) : (
                         <ul>
-                            {fields?.map((_, idx: number) => (
+                            {fields?.map((el, idx: number) => (
                                 <li key={idx} className='grid desktop:grid-cols-2 mt-5 gap-4 border-b-[1px] border-slate-600 pb-6 '>
                                     <div className='flex flex-col'>
                                         <label htmlFor={`title-${idx}`} className='text-white text-[19px] mb-3'> Title </label>
                                         <input
                                             id={`title-${idx}`}
-                                            value={formData[`title-${idx}`]}
-                                            onChange={handleChange}
+                                            value={el.title}
+                                            onChange={(e) => handleChange(e, idx)}
                                             type="text"
                                             name="title"
                                             placeholder='Title'
@@ -130,8 +132,8 @@ const Edit: React.FC = () => {
                                         <div className='desktop:flex w-full gap-3'>
                                             <input
                                                 id={`url-${idx}`}
-                                                value={formData[`url-${idx}`]}
-                                                onChange={handleChange}
+                                                value={el.url}
+                                                onChange={(e) => handleChange(e, idx)}
                                                 type="text"
                                                 name="url"
                                                 placeholder='Url'

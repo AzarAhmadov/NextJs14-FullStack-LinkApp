@@ -12,11 +12,11 @@ export type Linkdata = {
 export type SosialType = {
     title: string
     logo: string
+    onclick?: () => void
 }
 
 export type Props = {
     title: string,
     icon: JSX.Element,
     onClick?: () => void
-    
 }

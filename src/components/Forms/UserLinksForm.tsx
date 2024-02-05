@@ -65,7 +65,7 @@ const UserLinksForm: React.FC = () => {
                                     type="text"
                                     name="title"
                                     placeholder='Title'
-                                    className='text-black p-2 rounded-lg placeholder:text-black'
+                                    className='text-black outline-none p-2 rounded-lg placeholder:text-black'
                                 />
                             </div>
                             <div className='flex flex-col'>
@@ -78,7 +78,7 @@ const UserLinksForm: React.FC = () => {
                                         type="text"
                                         name="url"
                                         placeholder='Url'
-                                        className='text-black p-2 w-full rounded-lg placeholder:text-black'
+                                        className='text-black outline-none p-2 w-full rounded-lg placeholder:text-black'
                                     />
                                     <div className='flex justify-center'>
                                         <button onClick={() => handleDelete(idx)} className='bg-red-500 flex  text-white rounded-xl p-2 ps-4 pe-4 mt-4 desktop:mt-0 hover:bg-red-400 transition-all'>

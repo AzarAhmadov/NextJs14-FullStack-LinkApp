@@ -16,8 +16,7 @@ const Edit: React.FC = () => {
     return (
         <section className='min-h-lvh bg-slate-800 pt-4 pe-4 ps-4 pb-4'>
             <div className='container'>
-
-                <div className='bg-cover rounded-md relative bg-no-repeat h-[200px] bg-center bg-[url(https://images.pexels.com/photos/1366957/pexels-photo-1366957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)]'>
+                <div className='bg-cover rounded-md relative bg-no-repeat h-[200px] bg-center bg-[url(https://t3.ftcdn.net/jpg/03/18/04/12/360_F_318041250_Xp5dU1JBG0B8N6LtKuFpSA5ejohEPKcm.jpg)]'>
                     <div className='absolute left-0 right-0 -bottom-[120px] grid place-items-center h-[250px]'>
                         <div className='relative'>
                             <img className='inline-block object-cover h-24 w-24 rounded-full ring-2 ring-white' src="https://azarahmadov.com/_next/image?url=%2Fabout.jpeg&w=1080&q=75" alt="" />
@@ -43,12 +42,11 @@ const Edit: React.FC = () => {
                     }
                 </div>
 
-                <SaveButton title='save' icon={<FaCloudUploadAlt className='w-6 h-6 ms-2' />}/>
+                <SaveButton title='save' icon={<FaCloudUploadAlt className='w-6 h-6 ms-2' />} />
 
-                <Heading title={'Links'} icon={<FaExternalLinkSquareAlt className='w-7 h-7 mt-[4px] ms-2' />} />
+                <Heading title='Links' icon={<FaExternalLinkSquareAlt className='w-7 h-7 mt-[4px] ms-2' />} />
 
                 <UserLinksForm />
-
             </div>
         </section>
     )

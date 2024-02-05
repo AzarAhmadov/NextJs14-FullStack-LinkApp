@@ -62,7 +62,7 @@ export const SosialImage = [
         logo: '/wp.png'
     },
     {
-        title: 'instagram',
+        title: 'Youtube',
         logo: '/youtube.png'
     },
     {

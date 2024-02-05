@@ -1,16 +1,31 @@
 import { SosialType } from '@/types/Types'
 import Image from 'next/image'
-import React from 'react'
-
+import React, { useState } from 'react'
+import Modal from '../Modal/Modal'
 interface SosialProps {
     el: SosialType
 }
 
 const Sosial: React.FC<SosialProps> = ({ el }) => {
+
+    const [modal, setModal] = useState(false)
+
+    const showModal = () => {
+        setModal(prevent => !prevent)
+    }
+
+    const CurrentData = (data: SosialType) => {
+        return data
+    }
+
     return (
-        <div className='relative w-[63px] h-[63px] hover:scale-110 cursor-pointer transition-all'>
-            <Image className=' object-contain' src={el.logo} fill alt={el.title} sizes='(width: 63px)' />
-        </div>
+        <>
+            <div onClick={showModal} className='relative w-[63px] h-[63px] hover:scale-110 cursor-pointer transition-all'>
+                <Image onClick={() => CurrentData(el)} className=' object-contain' src={el.logo} fill alt={el.title} sizes='(width: 63px)' />
+            </div>
+
+            {modal && <Modal modal={showModal} CurrentData={el} />}
+        </>
     )
 }
 

@@ -13,3 +13,10 @@ export type SosialType = {
     title: string
     logo: string
 }
+
+export type Props = {
+    title: string,
+    icon: JSX.Element,
+    onClick?: () => void
+    
+}

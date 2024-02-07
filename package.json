@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/uuid": "^9.0.8",
+    "mongoose": "^8.1.1",
     "next": "14.1.0",
     "prettier-plugin-tailwind": "^2.2.12",
     "react": "^18",
@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/react": "^18",
+    "@types/react": "^18.2.55",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",

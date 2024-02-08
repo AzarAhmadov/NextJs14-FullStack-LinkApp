@@ -20,7 +20,7 @@ const Sosial: React.FC<SosialProps> = ({ el }) => {
 
     return (
         <>
-            <div onClick={showModal} className='relative w-[63px] h-[63px] hover:scale-110 cursor-pointer transition-all'>
+            <div onClick={showModal} className='relative w-[63px] pt-3 h-[63px] hover:scale-110 cursor-pointer transition-all'>
                 <Image onClick={() => CurrentData(el)} className=' object-contain' src={el.logo} fill alt={el.title} sizes='(width: 63px)' />
             </div>
 

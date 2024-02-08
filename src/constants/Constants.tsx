@@ -1,17 +1,6 @@
-import { FiGithub } from 'react-icons/fi';
-import { SlSocialFacebook } from 'react-icons/sl';
-import { FaWhatsapp } from 'react-icons/fa';
-import { PiTelegramLogoDuotone } from 'react-icons/pi';
-import { Linkdata, SocialMediaIcon } from '@/types/Types';
+import { Linkdata } from '@/types/Types';
 import { IoCallOutline } from "react-icons/io5";
 import { MdKeyboardArrowRight } from "react-icons/md";
-
-export const socialMediaData: SocialMediaIcon[] = [
-    { icon: <FiGithub color='#fff' size={30} />, link: 'https://github.com' },
-    { icon: <SlSocialFacebook color='#fff' size={30} />, link: 'https://facebook.com' },
-    { icon: <FaWhatsapp color='#fff' size={30} />, link: 'https://whatsapp.com' },
-    { icon: <PiTelegramLogoDuotone color='#fff' size={30} />, link: 'https://telegram.org' },
-];
 
 export const LinksData: Linkdata[] = [
     {
@@ -38,42 +27,52 @@ export const LinksData: Linkdata[] = [
 
 export const SosialImage = [
     {
+        id: 1,
         title: 'instagram',
         logo: '/instagram.png'
     },
     {
+        id: 2,
         title: 'Github',
         logo: '/github.png'
     },
     {
+        id: 3,
         title: 'Twitter',
         logo: '/twitter.png'
     },
     {
+        id: 4,
         title: 'Telegram',
         logo: '/Telegram.png'
     },
     {
+        id: 5,
         title: 'Facebook',
         logo: '/fb.png'
     },
     {
+        id: 6,
         title: 'Whatsapp',
         logo: '/wp.png'
     },
     {
+        id: 7,
         title: 'Youtube',
         logo: '/youtube.png'
     },
     {
+        id: 8,
         title: 'TikTok',
         logo: '/tiktok.png'
     },
     {
+        id: 9,
         title: 'Spotify',
         logo: '/spotify.png'
     },
     {
+        id: 10,
         title: 'Medium',
         logo: '/Medium.webp'
     },

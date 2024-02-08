@@ -1,5 +1,6 @@
 export type SocialMediaIcon = {
     icon: JSX.Element
+    name: string
     link: string
 }
 
@@ -12,6 +13,7 @@ export type Linkdata = {
 export type SosialType = {
     title: string
     logo: string
+    name?: string
     onclick?: () => void
 }
 

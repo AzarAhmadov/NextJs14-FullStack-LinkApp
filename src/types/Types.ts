@@ -2,6 +2,7 @@ export type SocialMediaIcon = {
     icon: JSX.Element
     name: string
     link: string
+    _id: string
 }
 
 export type Linkdata = {

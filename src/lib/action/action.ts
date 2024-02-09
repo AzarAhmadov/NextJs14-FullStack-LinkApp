@@ -3,6 +3,7 @@
 
 import { Bio, Sosial } from "@/lib/models/models";
 import { connectDB } from "../utils/connectDB";
+import { revalidatePath } from "next/cache";
 
 export const addBio = async (formData: FormData) => {
 
@@ -17,7 +18,8 @@ export const addBio = async (formData: FormData) => {
         });
 
         await newBio.save();
-        console.log("saved to db");
+        revalidatePath('/Demo')
+
     } catch (err) {
         console.log(err);
         return { error: "Something went wrong!" };
@@ -30,6 +32,7 @@ export const updateBio = async (formData: FormData) => {
         const { id, name, bio } = Object.fromEntries(formData);
         connectDB()
         await Bio.findOneAndUpdate({ id }, { name, bio }, { new: true });
+        revalidatePath('/Demo')
 
     } catch (err) {
         console.log(err)
@@ -47,7 +50,7 @@ export const addSosial = async (FormData: FormData) => {
         })
 
         await newLink.save();
-        console.log("saved to db");
+        revalidatePath('/Demo')
 
     } catch (err) {
         console.log(err)
@@ -55,4 +58,15 @@ export const addSosial = async (FormData: FormData) => {
     }
 }
 
+export const deleteSosial = async (formData: FormData) => {
+    const { id } = Object.fromEntries(formData);
 
+    try {
+        connectDB()
+        await Sosial.findByIdAndDelete(id);
+        revalidatePath('/Demo')
+    } catch (err) {
+        console.log(err);
+        return { error: "Something went wrong!" };
+    }
+}

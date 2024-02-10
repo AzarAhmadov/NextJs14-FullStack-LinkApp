@@ -1,7 +1,7 @@
 import React from 'react'
 import { Props } from '@/types/Types'
 
-const SaveButton: React.FC<Props> = ({ title, icon, onClick }) => {
+const SaveButton: React.FC<Props> = ({ title, icon }) => {
 
     const reload = () => {
         location.reload();
@@ -10,7 +10,6 @@ const SaveButton: React.FC<Props> = ({ title, icon, onClick }) => {
     return (
         <div onClick={reload}>
             <button
-                onClick={onClick}
                 className='bg-[#46627b] w-full mt-7 rounded-md p-2 text-white hover:scale-95 transition-all font-medium flex justify-center text-[18px]'>
                 {title} {icon}
             </button>

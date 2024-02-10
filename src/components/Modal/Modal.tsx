@@ -32,7 +32,7 @@ const Modal: React.FC<ModalProps> = ({ modal, CurrentData }) => {
                         name='link'
                         required
                         placeholder='Add a link' />
-                    <SaveButton onClick={modal} title='Save' icon={<FaCloudUploadAlt className='w-6 h-6 ms-2' />} />
+                    <SaveButton title='Save' icon={<FaCloudUploadAlt className='w-6 h-6 ms-2' />} />
                 </form>
 
                 <div onClick={modal} className="close absolute cursor-pointer top-3 right-3">

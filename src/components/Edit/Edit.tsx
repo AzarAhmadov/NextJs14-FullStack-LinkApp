@@ -18,7 +18,7 @@ const Edit: React.FC = () => {
         <section className='min-h-lvh bg-[#1C2833] pt-5 pe-4 ps-4 pb-9'>
             <div className='container'>
                 
-                <Link href={'/Demo'} className='text-white border-2 border-indigo-100/30 hover:bg-white hover:text-black transition-all w-max p-2 rounded-lg pe-5 ps-5 flex text-[18px] m-auto'> <FaArrowLeft className='h-auto me-2 w-4' />   Go Back </Link>
+                <Link href={'/Demo'} className='text-white border-2 border-indigo-100/30 hover:bg-white hover:text-black transition-all w-max p-2 rounded-lg pe-5 ps-5 flex text-[16px] m-auto'> <FaArrowLeft className='h-auto me-2 w-3' />  Go Back </Link>
                 
                 <UserProfile />
 

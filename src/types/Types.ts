@@ -21,5 +21,4 @@ export type SosialType = {
 export type Props = {
     title: string,
     icon: JSX.Element,
-    onClick?: () => void
 }

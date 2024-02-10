@@ -61,12 +61,12 @@ const Sosial: React.FC<sosialProps> = ({ el }) => {
                 <span className='h-full left-0 top-0 absolute w-full grid place-items-center'>
                     {el.name}
                 </span>
-                <form action={deleteSosial}>
+                {/* <form action={deleteSosial}>
                     <input type="hidden" name="id" value={`${el._id}`} />
                     <button className='h-full right-5 top-0 absolute'>
                         <PiTrashLight color='red' className='w-5 h-5' />
                     </button>
-                </form>
+                </form> */}
             </a>
         </li>
     )

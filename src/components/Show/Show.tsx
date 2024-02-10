@@ -17,7 +17,6 @@ const Show: React.FC = async () => {
     return (
         <section>
             <img className='fixed top-0 left-0 object-cover w-full h-[100%]' src={getUrlByProfileBack && getUrlByProfileBack[0]?.back_url} alt="Backgorund Image" />
-
             <div className='laptop:w-auto flex h-screen flex-col tablet:w-[100%] pt-7'>
                 <div className='h-screen z-10 grid place-items-center'>
                     <div>
@@ -48,7 +47,6 @@ const Show: React.FC = async () => {
                             <Link
                                 className='flex backdrop-contrast-125 bg-white/45 rounded-[30px] w-[350px] p-3 justify-center text-white hover:bg-white hover:text-black transition-all text-[20px]'
                                 href='/Edit'
-                                prefetch={false}
                             >
                                 Edit <LiaPlusSolid className='ms-2 mt-[3px] h-6 w-6' />
                             </Link>
@@ -61,7 +59,7 @@ const Show: React.FC = async () => {
             </div>
 
             <Share />
-        </section>
+        </section >
     )
 }
 

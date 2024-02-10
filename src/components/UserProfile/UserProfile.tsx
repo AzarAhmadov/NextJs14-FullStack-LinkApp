@@ -21,7 +21,7 @@ const UserProfile: React.FC = () => {
     return (
         <div className='relative'>
             <UserBack />
-            {backModal && <UserImageModal showModal={showBackModal} action={addBackProfile} name='back_url' placeHolder='Add a background url' />}
+            {backModal && <UserImageModal showModal={showBackModal} action={updateBackProfile} name='back_url' placeHolder='Add a background url' />}
             <div className='grid absolute top-0 w-full place-items-center h-[210px] '>
                 <button onClick={showBackModal} className='flex z-10 cursor-pointer text-[#000] bg-white p-3 rounded-lg hover:scale-105'> Change background image <TbPhotoPlus className='w-5 h-5 mt-[3px] ms-2' />  </button>
             </div>

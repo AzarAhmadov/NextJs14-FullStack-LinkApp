@@ -1,6 +1,6 @@
 
 
-import { Bio, Sosial } from "../models/models";
+import { Bio, Profile, ProfileBack, Sosial } from "../models/models";
 import { connectDB } from "../utils/connectDB";
 
 export const getBio = async () => {
@@ -19,6 +19,26 @@ export const getSosial = async () => {
         connectDB();
         const sosial = await Sosial.find();
         return sosial
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+export const getProfileUrl = async () => {
+    try {
+        connectDB();
+        const profileUrl = await Profile.find();
+        return profileUrl
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+export const getProfileBackUrl = async () => {
+    try {
+        connectDB();
+        const profileBack = await ProfileBack.find();
+        return profileBack
     } catch (err) {
         console.log(err)
     }

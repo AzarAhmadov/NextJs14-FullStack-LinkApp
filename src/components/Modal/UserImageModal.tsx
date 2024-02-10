@@ -7,11 +7,11 @@ import { ModalProps } from '@/components/UserProfile/userPhoto/UserPhoto';
 const UserImageModal: React.FC<ModalProps> = ({ showModal, name, placeHolder, action }) => {
 
     return (
-        <section className='fixed z-30 w-full h-screen top-0 left-0 grid place-items-center bg-[#0b0b0b5d] '>
-            <div className='w-[360px] grid place-items-center  backdrop-blur-sm bg-white/20  p-5 rounded-lg'>
+        <section className='fixed z-30 w-full h-screen top-0 left-0 grid place-items-center bg-[#0b0b0b5d]'>
+            <div className='w-[360px] grid place-items-center  backdrop-blur-sm bg-white/20  p-5 pt-7 pb-7 rounded-lg'>
                 <form className='w-full flex flex-col' action={action}>
                     <input
-                        className='mt-3 bg-inherit outline-none w-full p-2 -mb-3 text-white placeholder:text-white placeholder:text-[18px] text-[18px] border-b-2 text-center border-b-zinc-300'
+                        className='mt-3 bg-inherit outline-none w-full p-2 mb-3 text-white placeholder:text-white placeholder:text-[18px] text-[18px] border-b-2 text-center border-b-zinc-300'
                         type="text"
                         name={name}
                         required

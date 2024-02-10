@@ -10,7 +10,7 @@ const SaveButton: React.FC<Props> = ({ title, icon }) => {
     return (
         <div onClick={reload}>
             <button
-                className='bg-[#46627b] w-full mt-7 rounded-md p-2 text-white hover:scale-95 transition-all font-medium flex justify-center text-[18px]'>
+                className='bg-[#46627b] w-full rounded-md p-2 text-white hover:scale-95 transition-all font-medium flex justify-center text-[18px]'>
                 {title} {icon}
             </button>
         </div>

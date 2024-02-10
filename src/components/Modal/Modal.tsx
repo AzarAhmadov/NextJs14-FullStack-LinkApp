@@ -27,7 +27,7 @@ const Modal: React.FC<ModalProps> = ({ modal, CurrentData }) => {
                         name='name'
                     />
                     <input
-                        className='mt-3 bg-inherit outline-none w-full p-2 -mb-3 text-white placeholder:text-white placeholder:text-[18px] text-[18px] border-b-2 text-center border-b-zinc-300'
+                        className='mt-3 bg-inherit outline-none w-full p-2 mb-3 text-white placeholder:text-white placeholder:text-[18px] text-[18px] border-b-2 text-center border-b-zinc-300'
                         type="text"
                         name='link'
                         required

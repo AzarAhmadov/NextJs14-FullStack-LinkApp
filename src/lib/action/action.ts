@@ -18,7 +18,7 @@ export const addBio = async (formData: FormData) => {
         });
 
         await newBio.save();
-        revalidatePath('/Edit')
+        revalidatePath('/Demo')
 
     } catch (err) {
         console.log(err);
@@ -32,7 +32,7 @@ export const updateBio = async (formData: FormData) => {
         const { id, name, bio } = Object.fromEntries(formData);
         connectDB()
         await Bio.findOneAndUpdate({ id }, { name, bio }, { new: true });
-        revalidatePath('/Edit')
+        revalidatePath('/Demo')
 
     } catch (err) {
         console.log(err)
@@ -50,7 +50,7 @@ export const addSosial = async (FormData: FormData) => {
         })
 
         await newLink.save();
-        revalidatePath('/Edit')
+        revalidatePath('/Demo')
 
     } catch (err) {
         console.log(err)
@@ -82,7 +82,7 @@ export const addProfile = async (FormData: FormData) => {
         })
 
         await newUrl.save();
-        revalidatePath('/Edit')
+        revalidatePath('/Demo')
 
     } catch (err) {
         console.log(err)
@@ -96,7 +96,7 @@ export const updateProfile = async (FormData: FormData) => {
         const { id, url } = Object.fromEntries(FormData);
         connectDB()
         await Profile.findOneAndUpdate({ id }, { url }, { new: true });
-        revalidatePath('/Edit')
+        revalidatePath('/Demo')
 
     } catch (err) {
         console.log(err)
@@ -115,7 +115,7 @@ export const addBackProfile = async (FormData: FormData) => {
         })
 
         await newUrl.save();
-        revalidatePath('/Edit')
+        revalidatePath('/Demo')
 
     } catch (err) {
         console.log(err)
@@ -129,7 +129,7 @@ export const updateBackProfile = async (FormData: FormData) => {
         const { id, back_url } = Object.fromEntries(FormData);
         connectDB()
         await ProfileBack.findOneAndUpdate({ id }, { back_url }, { new: true });
-        revalidatePath('/Edit')
+        revalidatePath('/Demo')
 
     } catch (err) {
         console.log(err)

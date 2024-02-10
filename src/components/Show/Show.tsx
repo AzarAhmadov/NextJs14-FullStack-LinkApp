@@ -15,9 +15,8 @@ const Show: React.FC = async () => {
     const getUrlByProfileBack = await getProfileBackUrl()
 
     return (
-        <section
-        >
-            <img className='fixed top-0 left-0 object-cover w-full h-[100%]' src={getUrlByProfileBack && getUrlByProfileBack[0]?.back_url} alt="" />
+        <section>
+            <img className='fixed top-0 left-0 object-cover w-full h-[100%]' src={getUrlByProfileBack && getUrlByProfileBack[0]?.back_url} alt="Backgorund Image" />
 
             <div className='laptop:w-auto flex h-screen flex-col tablet:w-[100%] pt-7'>
                 <div className='h-screen z-10 grid place-items-center'>

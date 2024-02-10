@@ -126,7 +126,6 @@ export const addBackProfile = async (FormData: FormData) => {
 export const updateBackProfile = async (FormData: FormData) => {
 
     try {
-
         const { id, back_url } = Object.fromEntries(FormData);
         connectDB()
         await ProfileBack.findOneAndUpdate({ id }, { back_url }, { new: true });
@@ -136,7 +135,4 @@ export const updateBackProfile = async (FormData: FormData) => {
         console.log(err)
         return { error: "Something went wrong!" };
     }
-
-
-
 }

@@ -4,7 +4,7 @@ import { SocialMediaIcon } from '@/types/Types'
 import React from 'react'
 import { LuFacebook } from "react-icons/lu";
 import { PiMediumLogo, PiTelegramLogo } from "react-icons/pi";
-import { FaInstagram, FaWhatsapp } from 'react-icons/fa'
+import { FaInstagram, FaSpotify, FaWhatsapp } from 'react-icons/fa'
 import { FiGithub } from "react-icons/fi";
 import { RiTwitterXLine } from "react-icons/ri";
 import { PiYoutubeLogo } from "react-icons/pi";
@@ -45,6 +45,9 @@ const Sosial: React.FC<sosialProps> = ({ el }) => {
             break;
         case "Medium":
             socialIcon = <PiMediumLogo className='h-auto' color='#fff' size={30} />;
+            break;
+        case "Spotify":
+            socialIcon = <FaSpotify className='h-auto' color='#fff' size={30} />;
             break;
         default:
             socialIcon = null;

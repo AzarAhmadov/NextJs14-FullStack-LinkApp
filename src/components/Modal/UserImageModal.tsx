@@ -14,6 +14,7 @@ const UserImageModal: React.FC<ModalProps> = ({ showModal, name, placeHolder, ac
                         className='mt-3 bg-inherit outline-none w-full p-2 -mb-3 text-white placeholder:text-white placeholder:text-[18px] text-[18px] border-b-2 text-center border-b-zinc-300'
                         type="text"
                         name={name}
+                        required
                         placeholder={placeHolder} />
                     <SaveButton title='Save' icon={<FaCloudUploadAlt className='w-6 h-6 ms-2' />} />
                 </form>

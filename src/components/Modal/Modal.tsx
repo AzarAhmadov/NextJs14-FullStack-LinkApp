@@ -16,7 +16,7 @@ const Modal: React.FC<ModalProps> = ({ modal, CurrentData }) => {
     return (
         <section className='fixed z-30 w-full h-screen top-0 left-0 grid place-items-center bg-[#0b0b0b5d] '>
             <div className='w-[360px] grid place-items-center  backdrop-blur-sm bg-white/20  p-5 rounded-lg'>
-                
+
                 <Image width={90} height={90} src={CurrentData?.logo} alt={CurrentData?.title} />
 
                 <form className='w-full flex flex-col' action={addSosial}>
@@ -32,7 +32,7 @@ const Modal: React.FC<ModalProps> = ({ modal, CurrentData }) => {
                         name='link'
                         required
                         placeholder='Add a link' />
-                    <SaveButton title='Save' icon={<FaCloudUploadAlt className='w-6 h-6 ms-2' />} />
+                    <SaveButton onClick={modal} title='Save' icon={<FaCloudUploadAlt className='w-6 h-6 ms-2' />} />
                 </form>
 
                 <div onClick={modal} className="close absolute cursor-pointer top-3 right-3">

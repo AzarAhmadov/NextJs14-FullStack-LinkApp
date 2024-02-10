@@ -83,6 +83,7 @@ export const addProfile = async (FormData: FormData) => {
 
         await newUrl.save();
         revalidatePath('/Demo')
+        revalidatePath('/Edit')
 
     } catch (err) {
         console.log(err)
@@ -97,6 +98,7 @@ export const updateProfile = async (FormData: FormData) => {
         connectDB()
         await Profile.findOneAndUpdate({ id }, { url }, { new: true });
         revalidatePath('/Demo')
+        revalidatePath('/Edit')
 
     } catch (err) {
         console.log(err)
@@ -116,6 +118,7 @@ export const addBackProfile = async (FormData: FormData) => {
 
         await newUrl.save();
         revalidatePath('/Demo')
+        revalidatePath('/Edit')
 
     } catch (err) {
         console.log(err)
@@ -130,6 +133,7 @@ export const updateBackProfile = async (FormData: FormData) => {
         connectDB()
         await ProfileBack.findOneAndUpdate({ id }, { back_url }, { new: true });
         revalidatePath('/Demo')
+        revalidatePath('/Edit')
 
     } catch (err) {
         console.log(err)

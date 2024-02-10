@@ -28,8 +28,8 @@ const Show: React.FC = async () => {
                                 alt="User Photo" />
                         </div>
                         <div className="user-info text-white text-center pt-[15px] tablet:ps-2 tablet:pe-2 z-20">
-                            <h4 className='text-[27px] font-medium'> {Bio[0]?.name} </h4>
-                            <p className='text-[17px] mt-1 font-think m-auto laptop:w-[600px] ps-[10px] pe-[10px]'> {Bio[0]?.bio} </p>
+                            <h4 className='text-[27px] font-medium'> {Bio && Bio[0]?.name} </h4>
+                            <p className='text-[17px] mt-1 font-think m-auto laptop:w-[600px] ps-[10px] pe-[10px]'> {Bio && Bio[0]?.bio} </p>
                         </div>
                         <div className="absolute left-4 top-4">
                             <Link

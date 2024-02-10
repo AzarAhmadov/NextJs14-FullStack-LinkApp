@@ -1,7 +1,7 @@
 import React from 'react';
 import { MdOutlineSave } from 'react-icons/md';
 import SaveButton from './SaveButton';
-import { addBio, updateBio } from '@/lib/action/action';
+import { updateBio } from '@/lib/action/action';
 
 const UserInfoForm: React.FC = () => {
 

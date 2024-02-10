@@ -9,7 +9,6 @@ export const getBio = async () => {
         const bio = await Bio.find();
         return bio;
     } catch (err) {
-        console.log(err);
         throw new Error("Failed to fetch Bio!");
     }
 };
@@ -20,7 +19,7 @@ export const getSosial = async () => {
         const sosial = await Sosial.find();
         return sosial
     } catch (err) {
-        console.log(err)
+        throw new Error("Failed to fetch Sosials");
     }
 }
 
@@ -30,7 +29,7 @@ export const getProfileUrl = async () => {
         const profileUrl = await Profile.find();
         return profileUrl
     } catch (err) {
-        console.log(err)
+        throw new Error("Failed to fetch Profile Url");
     }
 }
 
@@ -40,6 +39,6 @@ export const getProfileBackUrl = async () => {
         const profileBack = await ProfileBack.find();
         return profileBack
     } catch (err) {
-        console.log(err)
+        throw new Error("Failed to fetch Profile Back Url");
     }
 }

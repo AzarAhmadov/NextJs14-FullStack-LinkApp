@@ -51,6 +51,7 @@ const Show: React.FC = async () => {
                             <Link
                                 className='flex backdrop-contrast-125 bg-white/45 rounded-[30px] w-[350px] p-3 justify-center text-white hover:bg-white hover:text-black transition-all text-[20px]'
                                 href='/Edit'
+                                target='_top'
                             >
                                 Edit <LiaPlusSolid className='ms-2 mt-[3px] h-6 w-6' />
                             </Link>

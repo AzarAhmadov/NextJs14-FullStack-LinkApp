@@ -58,15 +58,15 @@ const Sosial: React.FC<sosialProps> = ({ el }) => {
         <li className='w-[350px]'>
             <a target='_blank' className='p-3 shadow-lg flex backdrop-blur-sm bg-white/20 font-medium  ps-4 pe-2 rounded-[30px] text-[#fff] border-[1px] transition-all hover:scale-110' href={el.link}>
                 {socialIcon}
-                <span className='h-full left-0 top-0 absolute w-full grid place-items-center'>
+                <span className='grid place-items-center w-[265px]'>
                     {el.name}
                 </span>
-                {/* <form action={deleteSosial}>
+                <form action={deleteSosial}>
                     <input type="hidden" name="id" value={`${el._id}`} />
                     <button className='h-full right-5 top-0 absolute'>
                         <PiTrashLight color='red' className='w-5 h-5' />
                     </button>
-                </form> */}
+                </form>
             </a>
         </li>
     )

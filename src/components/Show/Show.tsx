@@ -24,12 +24,15 @@ const Show: React.FC = async () => {
                             <img
                                 className="inline-block object-cover h-[100px] w-[100px] rounded-full ring-2 ring-white"
                                 src={getUrlByProfile && getUrlByProfile[0]?.url}
-                                alt="User Photo" />
+                                alt="User Photo"
+                            />
                         </div>
+
                         <div className="user-info text-white text-center pt-[15px] tablet:ps-2 tablet:pe-2 z-20">
                             <h4 className='text-[27px] font-medium'> {Bio && Bio[0]?.name} </h4>
                             <p className='text-[17px] mt-1 font-think m-auto laptop:w-[600px] ps-[10px] pe-[10px]'> {Bio && Bio[0]?.bio} </p>
                         </div>
+
                         <div className="absolute left-4 top-4">
                             <Link
                                 className='flex backdrop-contrast-125 bg-white/15 ps-4 pe-4 pt-2 pb-2 rounded-[30px] text-white hover:bg-white hover:text-black transition-all text-[17px] font-light'
@@ -38,6 +41,7 @@ const Show: React.FC = async () => {
                                 <FaRegUserCircle className='ms-2 h-auto' />
                             </Link>
                         </div>
+
                         <ul className="sosial grid place-items-center gap-4 ps-3 pe-3 pt-6 ">
                             {
                                 SosialData?.map((el, idx) => (
@@ -51,9 +55,11 @@ const Show: React.FC = async () => {
                                 Edit <LiaPlusSolid className='ms-2 mt-[3px] h-6 w-6' />
                             </Link>
                         </ul>
+
                         <div className='text-black flex justify-center pt-4 pb-3'>
                             <Link className='flex text-[22px] font-light text-white' href={'/'}> Linkro <LuLink2 className='h-[28px] w-[28px] ms-2 mt-1' />  </Link>
                         </div>
+
                     </div>
                 </div>
             </div>

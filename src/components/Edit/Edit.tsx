@@ -1,9 +1,7 @@
 'use client'
 
 import React from 'react';
-import { TbPhotoPlus } from "react-icons/tb";
 import { RiAccountBoxLine } from "react-icons/ri";
-import { TbPhotoCirclePlus } from "react-icons/tb";
 import { SosialImage } from '@/constants/Constants';
 import Sosial from '../Sosial/Sosial';
 import Heading from '@/common/Heading';

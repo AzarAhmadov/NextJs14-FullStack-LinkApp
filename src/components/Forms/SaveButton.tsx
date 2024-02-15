@@ -9,7 +9,7 @@ const SaveButton: React.FC = () => {
 
     useEffect(() => {
         if (pending) {
-            window.location.href = '/Edit'; 
+            window.location.reload()
         }
     }, [pending]);
 

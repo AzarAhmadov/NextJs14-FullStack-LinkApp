@@ -9,7 +9,7 @@ const SaveButton: React.FC = () => {
 
     useEffect(() => {
         if (pending) {
-            redirect('/Edit')
+            window.location.reload();
         }
     }, [pending]);
 

@@ -10,7 +10,7 @@ const UserImageModal: React.FC<ModalProps> = ({ showModal, name, placeHolder, ac
             <div className='w-[360px] relative grid place-items-center backdrop-blur-sm bg-white/20  p-5 pt-7 pb-7 rounded-lg'>
                 <form className='w-full flex flex-col' action={action}>
                     <input
-                        className='mt-3 bg-inherit outline-none w-full p-2 mb-3 text-white placeholder:text-white placeholder:text-[18px] text-[18px] border-b-2 text-center border-b-zinc-300'
+                        className='mt-3 bg-inherit outline-none w-full p-2 mb-3 text-white placeholder:text-white placeholder:text-[18px] text-[18px] border-b-2 text-center border-b-zinc-400 hover:border-b-zinc-200 transition-all'
                         type="text"
                         name={name}
                         required

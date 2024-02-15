@@ -28,51 +28,56 @@ export const LinksData: Linkdata[] = [
 export const SosialImage = [
     {
         id: 1,
+        title: 'Web',
+        logo: '/www.webp'
+    },
+    {
+        id: 2,
         title: 'instagram',
         logo: '/instagram.png'
     },
     {
-        id: 2,
+        id: 3,
         title: 'Github',
         logo: '/github.png'
     },
     {
-        id: 3,
+        id: 4,
         title: 'Twitter',
         logo: '/twitter.png'
     },
     {
-        id: 4,
+        id: 5,
         title: 'Telegram',
         logo: '/Telegram.png'
     },
     {
-        id: 5,
+        id: 6,
         title: 'Facebook',
         logo: '/fb.png'
     },
     {
-        id: 6,
+        id: 7,
         title: 'Whatsapp',
         logo: '/wp.png'
     },
     {
-        id: 7,
+        id: 8,
         title: 'Youtube',
         logo: '/youtube.png'
     },
     {
-        id: 8,
+        id: 9,
         title: 'TikTok',
         logo: '/tiktok.png'
     },
     {
-        id: 9,
+        id: 10,
         title: 'Spotify',
         logo: '/spotify.png'
     },
     {
-        id: 10,
+        id: 11,
         title: 'Medium',
         logo: '/Medium.webp'
     },

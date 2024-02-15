@@ -3,7 +3,7 @@ import { TbPhotoPlus } from 'react-icons/tb'
 import UserPhoto from '@/components/UserProfile/userPhoto/UserPhoto'
 import UserImageModal from '../Modal/UserImageModal'
 import UserBack from './userBackPhoto/UserBack'
-import { addBackProfile, updateBackProfile, updateProfile } from '@/lib/action/action'
+import { updateBackProfile, updateProfile } from '@/lib/action/action'
 
 const UserProfile: React.FC = () => {
 

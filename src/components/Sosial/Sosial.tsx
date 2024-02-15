@@ -1,7 +1,8 @@
+
 import { SosialType } from '@/types/Types'
 import Image from 'next/image'
-import React, { useState } from 'react'
 import Modal from '../Modal/Modal'
+import { useState } from 'react'
 interface SosialProps {
     el: SosialType
 }

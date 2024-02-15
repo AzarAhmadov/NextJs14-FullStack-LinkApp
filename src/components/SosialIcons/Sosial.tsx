@@ -11,6 +11,7 @@ import { PiYoutubeLogo } from "react-icons/pi";
 import { PiTiktokLogo } from "react-icons/pi";
 import { PiTrashLight } from "react-icons/pi";
 import { deleteSosial } from '@/lib/action/action';
+import { TbWorldWww } from "react-icons/tb";
 interface sosialProps {
     el: SocialMediaIcon
 }
@@ -48,6 +49,9 @@ const Sosial: React.FC<sosialProps> = ({ el }) => {
             break;
         case "Spotify":
             socialIcon = <FaSpotify className='h-auto' color='#fff' size={30} />;
+            break;
+        case "Web":
+            socialIcon = <TbWorldWww className='h-auto' color='#fff' size={30} />;
             break;
         default:
             socialIcon = null;

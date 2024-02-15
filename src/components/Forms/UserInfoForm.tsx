@@ -1,5 +1,4 @@
 import React from 'react';
-import { MdOutlineSave } from 'react-icons/md';
 import SaveButton from './SaveButton';
 import { updateBio } from '@/lib/action/action';
 import { getBio } from '@/lib/data/Data';
@@ -14,7 +13,7 @@ const UserInfoForm: React.FC = async () => {
             <input
                 className='text-black p-2 outline-none rounded-lg placeholder:text-black'
                 type="text"
-                id='Name'
+                required
                 value={Bio && Bio[0]?.name}
                 placeholder='Name'
                 name='name'
@@ -24,11 +23,11 @@ const UserInfoForm: React.FC = async () => {
                 maxLength={55}
                 className='text-black mb-4 outline-none p-2 pb-10 rounded-lg resize-none placeholder:text-black'
                 name="bio"
+                required
                 placeholder='Bio'
                 value={Bio && Bio[0]?.bio}
-                id="bio"
             />
-            <SaveButton title='save' icon={<MdOutlineSave className='w-5 h-5 mt-[3px] ms-2' />} />
+            <SaveButton />
         </form>
     )
 }

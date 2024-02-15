@@ -64,9 +64,8 @@ const Show: React.FC = async () => {
                     </div>
                 </div>
             </div>
-
             <Share />
-        </section >
+        </section>
     )
 }
 

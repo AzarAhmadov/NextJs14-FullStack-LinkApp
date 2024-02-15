@@ -1,3 +1,4 @@
+import { redirect } from 'next/navigation';
 import React, { useEffect } from 'react';
 import { useFormStatus } from 'react-dom';
 import { MdOutlineSave } from 'react-icons/md';
@@ -8,7 +9,7 @@ const SaveButton: React.FC = () => {
 
     useEffect(() => {
         if (pending) {
-            window.location.reload();
+            redirect('/Demo')
         }
     }, [pending]);
 
@@ -17,14 +18,10 @@ const SaveButton: React.FC = () => {
             <button
                 type="submit"
                 disabled={pending}
-                className='w-full'
+                className={`bg-[#46627b] w-full rounded-md p-2 text-white hover:scale-95 transition-all font-medium flex justify-center text-[18px] ${pending ? 'opacity-50' : ''}`}
             >
-                <a
-                    className={`bg-[#46627b] w-full rounded-md p-2 text-white hover:scale-95 transition-all font-medium flex justify-center text-[18px] ${pending ? 'opacity-50' : ''}`}
-                    target='_top'>
-                    {pending ? "Saving..." : "Save"}
-                    {pending && <MdOutlineSave className='w-5 h-5 mt-[3px] ms-2' />}
-                </a>
+                {pending ? "Saving..." : "Save"}
+                {pending && <MdOutlineSave className='w-5 h-5 mt-[3px] ms-2' />}
             </button>
         </div>
     );

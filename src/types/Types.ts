@@ -18,3 +18,8 @@ export type SosialType = {
     name?: string
     onclick?: () => void
 }
+
+export type HeadingProps = {
+    title: string,
+    icon: JSX.Element,
+}

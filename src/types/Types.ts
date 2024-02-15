@@ -3,6 +3,7 @@ export type SocialMediaIcon = {
     name: string
     link: string
     _id: string
+    title: string
 }
 
 export type Linkdata = {

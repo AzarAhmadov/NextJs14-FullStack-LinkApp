@@ -55,11 +55,11 @@ const Sosial: React.FC<sosialProps> = ({ el }) => {
     }
 
     return (
-        <li className='w-[350px]'>
+        <li className='w-[360px]'>
             <a target='_blank' className='p-3 shadow-lg flex backdrop-blur-sm bg-white/20 font-medium  ps-4 pe-2 rounded-[30px] text-[#fff] border-[1px] transition-all hover:scale-110' href={el.link}>
                 {socialIcon}
-                <span className='grid place-items-center w-[265px]'>
-                    {el.name}
+                <span className='grid place-items-center w-[265px] whitespace-pre overflow-hidden'>
+                    {el.title.length > 24 ? `${el.title.substring(0, 24)}...` : el.title}
                 </span>
                 <form action={deleteSosial}>
                     <input type="hidden" name="id" value={`${el._id}`} />

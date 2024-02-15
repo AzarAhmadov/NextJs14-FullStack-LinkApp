@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { LuLink2 } from 'react-icons/lu';
 
-const Login: React.FC = () => {
+const Home: React.FC = () => {
 
     const delayTimes = [0, 0.3, 0.5, 0.7, 0.9];
 
@@ -41,4 +41,4 @@ const Login: React.FC = () => {
     );
 }
 
-export default Login;
+export default Home;

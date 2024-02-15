@@ -43,12 +43,13 @@ export const updateBio = async (formData: FormData) => {
 
 export const addSosial = async (FormData: FormData) => {
     try {
-        const { name, link } = Object.fromEntries(FormData)
+        const { name, link, title } = Object.fromEntries(FormData)
         connectDB()
 
         const newLink = new Sosial({
             name,
-            link
+            link,
+            title
         })
 
         await newLink.save();

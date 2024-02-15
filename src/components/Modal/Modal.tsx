@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SaveButton from '../Forms/SaveButton'
 import { FaCloudUploadAlt } from 'react-icons/fa'
 import Image from 'next/image'
@@ -21,7 +21,7 @@ const Modal: React.FC<ModalProps> = ({ modal, CurrentData }) => {
 
                 <form className='w-full flex flex-col' action={addSosial}>
                     <input
-                        className='mt-3 text-center bg-inherit outline-none w-full text-white text-[22px]'
+                        className='mt-3 placeholder:text-white placeholder:text-[20px] text-center bg-inherit outline-none w-full text-white text-[22px]'
                         type="text"
                         value={CurrentData?.title}
                         name='name'
@@ -29,8 +29,17 @@ const Modal: React.FC<ModalProps> = ({ modal, CurrentData }) => {
                     <input
                         className='mt-3 bg-inherit outline-none w-full p-2 mb-3 text-white placeholder:text-white placeholder:text-[18px] text-[18px] border-b-2 text-center border-b-zinc-300'
                         type="text"
+                        placeholder='Add the name of the link'
+                        name='title'
+                        required
+                    />
+                    <input
+                        className='mt-3 bg-inherit outline-none w-full p-2 mb-3 text-white placeholder:text-white placeholder:text-[18px] text-[18px] border-b-2 text-center border-b-zinc-300'
+                        type="text"
                         name='link'
-                        placeholder='Add a link' />
+                        required
+                        placeholder='Add your link'
+                    />
                     <SaveButton title='Save' icon={<FaCloudUploadAlt className='w-6 h-6 ms-2' />} />
                 </form>
 

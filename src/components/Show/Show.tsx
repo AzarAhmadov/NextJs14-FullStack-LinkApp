@@ -33,15 +33,6 @@ const Show: React.FC = async () => {
                             <p className='text-[17px] mt-1 font-think m-auto laptop:w-[600px] ps-[10px] pe-[10px]'> {Bio && Bio[0]?.bio} </p>
                         </div>
 
-                        <div className="absolute left-4 top-4">
-                            <Link
-                                className='flex backdrop-contrast-125 bg-white/15 ps-4 pe-4 pt-2 pb-2 rounded-[30px] text-white hover:bg-white hover:text-black transition-all text-[17px] font-light'
-                                href='/Edit'>
-                                Preview
-                                <FaRegUserCircle className='ms-2 h-auto' />
-                            </Link>
-                        </div>
-
                         <ul className="sosial grid place-items-center gap-4 ps-3 pe-3 pt-6 ">
                             {
                                 SosialData?.map((el, idx) => (

@@ -18,7 +18,7 @@ const SaveButton: React.FC = () => {
             <button
                 type="submit"
                 disabled={pending}
-                className={`bg-[#46627b] w-full rounded-md p-2 text-white hover:scale-95 transition-all font-medium flex justify-center text-[18px] ${pending ? 'opacity-50' : ''}`}
+                className={`bg-[#545454] w-full rounded-md p-2 text-white hover:scale-95 transition-all font-medium flex justify-center text-[18px] ${pending ? 'opacity-50' : ''}`}
             >
                 {pending ? "Saving..." : "Save"}
                 {pending && <MdOutlineSave className='w-5 h-5 mt-[3px] ms-2' />}

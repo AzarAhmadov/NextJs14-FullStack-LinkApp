@@ -1,4 +1,4 @@
-<img width="1511" alt="Screenshot 2024-02-17 at 16 33 50" src="https://github.com/AzarAhmadov/NextJs14-FullStack-LinkApp/assets/82292818/ec6c79f8-4550-43f7-a9c0-92a79500f48f"># Linkro
+# Linkro
 This is a full stack link application. In this project you can see all my public links.
 
 ## Demo

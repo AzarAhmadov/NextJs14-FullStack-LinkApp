@@ -9,9 +9,9 @@ import { FiGithub } from "react-icons/fi";
 import { RiTwitterXLine } from "react-icons/ri";
 import { PiYoutubeLogo } from "react-icons/pi";
 import { PiTiktokLogo } from "react-icons/pi";
-import { PiTrashLight } from "react-icons/pi";
 import { deleteSosial } from '@/lib/action/action';
 import { TbWorldWww } from "react-icons/tb";
+import DeleteButton from '../Forms/DeleteButton';
 interface sosialProps {
     el: SocialMediaIcon
 }
@@ -65,11 +65,10 @@ const Sosial: React.FC<sosialProps> = ({ el }) => {
                 <span className='grid place-items-center w-[265px] whitespace-pre overflow-hidden'>
                     {el.title.length > 24 ? `${el.title.substring(0, 24)}...` : el.title}
                 </span>
+
                 <form action={deleteSosial}>
                     <input type="hidden" name="id" value={`${el._id}`} />
-                    <button className='h-full'>
-                        <PiTrashLight color='red' className='w-5 h-5' />
-                    </button>
+                    <DeleteButton />
                 </form>
             </a>
         </li>

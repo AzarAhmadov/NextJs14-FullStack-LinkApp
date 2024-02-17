@@ -1,6 +1,5 @@
 import React from 'react'
 import SaveButton from '../Forms/SaveButton'
-import { FaCloudUploadAlt } from 'react-icons/fa'
 import Image from 'next/image'
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { SosialType } from '@/types/Types';

@@ -5,6 +5,7 @@ import Share from '../Share/Share';
 import Link from 'next/link';
 import { getBio, getProfileBackUrl, getProfileUrl, getSosial } from '@/lib/data/Data';
 import { LiaPlusSolid } from "react-icons/lia";
+import { auth } from '@clerk/nextjs';
 
 const Show: React.FC = async () => {
 
@@ -12,6 +13,7 @@ const Show: React.FC = async () => {
     const SosialData = await getSosial()
     const getUrlByProfile = await getProfileUrl()
     const getUrlByProfileBack = await getProfileBackUrl()
+    const { userId } = auth()
 
     return (
         <section>
@@ -27,24 +29,26 @@ const Show: React.FC = async () => {
                             />
                         </div>
 
-                        <div className="user-info text-white text-center pt-[15px] tablet:ps-2 tablet:pe-2 z-20">
+                        <div className="user-info text-white text-center pt-[10px] tablet:ps-2 tablet:pe-2 z-20">
                             <h4 className='text-[27px] font-medium'> {Bio && Bio[0]?.name} </h4>
                             <p className='text-[17px] mt-1 font-think m-auto laptop:w-[600px] ps-[10px] pe-[10px]'> {Bio && Bio[0]?.bio} </p>
                         </div>
 
-                        <ul className="sosial grid place-items-center gap-4 ps-3 pe-3 pt-6 ">
+                        <ul className="sosial grid place-items-center gap-4 ps-3 pe-3 pt-4 ">
                             {
                                 SosialData?.map((el, idx) => (
                                     <Sosial el={el} key={idx} />
                                 ))
                             }
-                            <Link
-                                className='flex backdrop-contrast-125 bg-white/45 rounded-[30px] w-[350px] p-3 justify-center text-white hover:bg-white hover:text-black transition-all text-[20px]'
-                                href='/Edit'
-                                target='_top'
-                            >
-                                Edit <LiaPlusSolid className='ms-2 mt-[3px] h-6 w-6' />
-                            </Link>
+                            {
+                                userId === process.env.NEXT_PUBLIC_CLERK_ID && <Link
+                                    className='flex backdrop-contrast-125 bg-white/45 rounded-[30px] w-[350px] p-3 justify-center text-white hover:bg-white hover:text-black transition-all text-[20px]'
+                                    href='/Edit'
+                                    target='_top'
+                                >
+                                    Edit <LiaPlusSolid className='ms-2 mt-[3px] h-6 w-6' />
+                                </Link>
+                            }
                         </ul>
 
                         <div className='text-black flex justify-center pt-5 pb-3'>

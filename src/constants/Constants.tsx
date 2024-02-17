@@ -81,4 +81,9 @@ export const SosialImage = [
         title: 'Medium',
         logo: '/Medium.webp'
     },
+    {
+        id: 12,
+        title: 'LinkedIn',
+        logo: '/linkedin.png'
+    },
 ]

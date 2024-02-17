@@ -50,7 +50,6 @@ const Show: React.FC = async () => {
                         <div className='text-black flex justify-center pt-5 pb-3'>
                             <span className='flex text-[18px] font-light text-white'>  Built by <a className='ms-1 border-1 border-b-[1px]' href="https://azarahmadov.com/" target='_blank'>AzarAhmadov</a> <LuLink2 className=' h-auto w-6 ms-2' />  </span>
                         </div>
-
                     </div>
                 </div>
             </div>

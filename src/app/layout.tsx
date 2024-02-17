@@ -1,3 +1,4 @@
+import { ClerkProvider } from '@clerk/nextjs'
 import "../assets/output.css";
 
 export const metadata = {
@@ -11,9 +12,11 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
       <head>
         <link rel="icon" type="image/x-icon" href="/fav-icon.png"></link>
       </head>
-      <body className="h-full">
-        {children}
-      </body>
+      <ClerkProvider>
+        <html lang="en">
+          <body>{children}</body>
+        </html>
+      </ClerkProvider>
     </html>
   );
 }

@@ -12,7 +12,6 @@ import { PiTiktokLogo } from "react-icons/pi";
 import { PiTrashLight } from "react-icons/pi";
 import { deleteSosial } from '@/lib/action/action';
 import { TbWorldWww } from "react-icons/tb";
-import { useFormStatus } from 'react-dom';
 interface sosialProps {
     el: SocialMediaIcon
 }

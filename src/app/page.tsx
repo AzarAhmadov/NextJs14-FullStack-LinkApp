@@ -1,9 +1,9 @@
-import Home from '@/components/Home/Home'
 import React from 'react'
+import Demo from './AzarAhmadov/page'
 
 const page: React.FC = () => {
   return (
-    <Home />
+    <Demo />
   )
 }
 

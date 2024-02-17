@@ -1,5 +1,4 @@
 import React from 'react'
-import { FaRegUserCircle } from "react-icons/fa";
 import { LuLink2 } from "react-icons/lu";
 import Sosial from '../SosialIcons/Sosial';
 import Share from '../Share/Share';
@@ -48,8 +47,8 @@ const Show: React.FC = async () => {
                             </Link>
                         </ul>
 
-                        <div className='text-black flex justify-center pt-4 pb-3'>
-                            <Link className='flex text-[22px] font-light text-white' href={'/'}> Linkro <LuLink2 className='h-[28px] w-[28px] ms-2 mt-1' />  </Link>
+                        <div className='text-black flex justify-center pt-5 pb-3'>
+                            <span className='flex text-[18px] font-light text-white'>  Built by <a className='ms-1 border-1 border-b-[1px]' href="https://azarahmadov.com/" target='_blank'>AzarAhmadov</a> <LuLink2 className=' h-auto w-6 ms-2' />  </span>
                         </div>
 
                     </div>

@@ -16,7 +16,7 @@ const Edit: React.FC = () => {
         <section className='min-h-scree pt-4 pe-4 ps-4 pb-9  bg-gradient-to-r from-[#08090ce2] to-[#171717]'>
             <div className='container'>
 
-                <Link href={'/Demo'} className='text-white border-2 border-indigo-100/30 hover:bg-white hover:text-black transition-all w-max p-2 rounded-lg pe-5 ps-5 flex text-[16px] m-auto'> <FaArrowLeft className='h-auto me-2 w-3' />  Go Back </Link>
+                <Link href={'/AzarAhmadov'} className='text-white border-2 border-indigo-100/30 hover:bg-white hover:text-black transition-all w-max p-2 rounded-lg pe-5 ps-5 flex text-[16px] m-auto'> <FaArrowLeft className='h-auto me-2 w-3' />  Go Back </Link>
 
                 <UserProfile />
 

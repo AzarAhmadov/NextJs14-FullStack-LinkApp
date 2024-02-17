@@ -6,8 +6,11 @@ Demo : https://linkro.vercel.app/AzarAhmadov
 
 ## Features
 - Next.js and TypeScript Integration: Utilizing Next.js and TypeScript for a robust and statically-typed frontend, providing enhanced development capabilities and code maintainability.
+  
 - MongoDB Database Integration: Employing MongoDB as the database solution, offering flexibility and scalability for efficient data storage and retrieval.
+  
 - Clerk: Clerk handles user authentication and authorization, simplifying management of sessions, roles, and permissions in the application, enhancing security and access control.
+  
 - SEO-Friendly Structure: Utilizing SEO-friendly URLs and optimizing meta tags for better search engine visibility.
 
 ## Technologies Used

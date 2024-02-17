@@ -33,7 +33,8 @@ Linkro is deployed on Vercel, a popular platform for hosting web applications.
 
 <img width="1511" alt="Screenshot 2024-02-17 at 16 33 50" src="https://github.com/AzarAhmadov/NextJs14-FullStack-LinkApp/assets/82292818/bf59d535-762b-4757-8016-fd74642b9857">
 
-<img width="1511" alt="Screenshot 2024-02-17 at 15 48 32" src="https://github.com/AzarAhmadov/NextJs14-FullStack-LinkApp/assets/82292818/11a093dc-45d8-4c8c-999a-3d3627699a6a">
+<img width="1511" alt="Screenshot 2024-02-17 at 17 07 55" src="https://github.com/AzarAhmadov/NextJs14-FullStack-LinkApp/assets/82292818/ce4a89a2-447e-46ed-97f6-8d8fe35d57c2">
+
 
 
 
